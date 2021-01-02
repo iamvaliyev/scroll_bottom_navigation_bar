@@ -40,8 +40,8 @@ class ScrollBottomNavigationBar extends StatefulWidget {
     this.unselectedFontSize = 12.0,
     this.selectedLabelStyle,
     this.unselectedLabelStyle,
-    this.showSelectedLabels = true,
-    this.showUnselectedLabels,
+    this.showSelectedLabels = false,
+    this.showUnselectedLabels = false,
   })  : assert(controller != null),
         super(key: key);
 
@@ -87,6 +87,7 @@ class _ScrollBottomNavigationBarState extends State<ScrollBottomNavigationBar> {
       selectedLabelStyle: widget.selectedLabelStyle,
       unselectedLabelStyle: widget.unselectedLabelStyle,
       showSelectedLabels: widget.showSelectedLabels,
+      showUnselectedLabels: widget.showUnselectedLabels,
     );
 
     return ValueListenableBuilder<bool>(
